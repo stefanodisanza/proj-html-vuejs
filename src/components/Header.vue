@@ -35,7 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -43,20 +42,18 @@ export default {
     z-index: 1000;
 }
 
+.header__logo {
+    width: 150px;
+}
+
 .header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding-top: 20px;
 }
 
-.header__logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-}
 
 .header__nav {
     display: flex;

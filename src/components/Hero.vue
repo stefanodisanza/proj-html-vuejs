@@ -2,7 +2,7 @@
     <section class="hero">
         <div class="left__side">
             <div class="hero__container">
-                <h2 class="hero__subtitle">{{ subtitle }}</h2>
+                <h4 class="hero__subtitle">{{ subtitle }}</h4>
                 <h1 class="hero__title">{{ title }}</h1>
                 <button class="hero__cta">{{ ctaText }}</button>
             </div>
@@ -31,6 +31,7 @@ export default {
 .hero {
     background-color: #1F1838;
     display: flex;
+
 }
 
 img {
@@ -52,14 +53,12 @@ img {
 }
 
 .hero__subtitle {
-    font-size: 24px;
-    font-weight: bold;
     color: #fff;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .hero__cta {
-    background-color: #fff;
+    background-color: #39FFBF;
     color: #000;
     font-size: 18px;
     font-weight: bold;

@@ -3,6 +3,7 @@
     <Header />
     <Hero />
     <Consultans />
+    <About />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Header from './components/Header.vue';
 import Hero from './components/Hero.vue';
 import Consultans from './components/Consultans.vue';
+import About from './components/About.vue'
 
 export default {
   components: {
     Header,
     Hero,
-    Consultans
+    Consultans,
+    About
   }
 
 }

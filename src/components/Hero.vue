@@ -31,7 +31,6 @@ export default {
 .hero {
     background-color: #1F1838;
     display: flex;
-
 }
 
 img {

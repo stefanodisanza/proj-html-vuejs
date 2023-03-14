@@ -1,8 +1,9 @@
 <template>
-    <header class="main-header">
-        <div class="container">
-            <img class="logo-header " src="/images/logotype.png" alt="">
-            <nav>
+    <header class="header">
+        <div class="header__container">
+            <!-- logo e navbar -->
+            <img class="header__logo " src="/images/logotype.png" alt="">
+            <nav class="header__nav">
                 <ul>
                     <li v-for="link in links" :key="link.id">
                         <a :href="link.url">{{ link.label }}</a>
@@ -10,7 +11,6 @@
                 </ul>
             </nav>
         </div>
-
     </header>
 </template>
 
@@ -34,29 +34,51 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-header {
-    text-align: center;
+.header {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.container {
+.header__container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-ul {
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.header__nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-li {
+.header__nav ul {
+    display: flex;
     list-style: none;
-    margin: 15px;
-}
+    margin: 0;
+    padding: 0;
 
-.logo-header {
-    width: 130px;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    li {
+        list-style: none;
+        margin: 15px;
+        color: white;
+    }
 }
-</style>
+</style>```

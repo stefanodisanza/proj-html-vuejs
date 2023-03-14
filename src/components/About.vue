@@ -52,6 +52,12 @@ export default {
 
 .about__green-text {
     margin-right: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-right: 100px;
 }
 
 .about__green-button {

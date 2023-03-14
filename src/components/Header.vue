@@ -2,7 +2,7 @@
     <header class="header">
         <div class="header__container">
             <!-- logo e navbar -->
-            <img class="header__logo " src="/images/logotype.png" alt="">
+            <img class="header__logo" src="/images/logotype.png" alt="">
             <nav class="header__nav">
                 <ul>
                     <li v-for="link in links" :key="link.id">
@@ -27,10 +27,27 @@ export default {
                 { id: 5, label: 'Blog', url: '/blog' },
                 { id: 6, label: 'Contact', url: '/contact' },
             ],
-        }
-    }
+        };
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+        handleScroll() {
+            const navbar = document.querySelector('.header');
+            const scrollPosition = window.scrollY;
 
-}
+            if (scrollPosition > 0) {
+                navbar.classList.add('hide-nav');
+            } else {
+                navbar.classList.remove('hide-nav');
+            }
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -40,43 +57,46 @@ export default {
     left: 0;
     width: 100%;
     z-index: 1000;
+    overflow: hidden;
 
-}
+    &.hide-nav {
+        transform: translateY(-100%);
+    }
 
-.header__logo {
-    width: 150px;
-}
+    .header__logo {
+        width: 150px;
+    }
 
-.header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 20px;
-}
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
 
+    .header__nav {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-.header__nav {
-    display: flex;
-    justify-content: flex-end;
-}
+    .header__nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.header__nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    ul {
+    .header__nav ul ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    li {
+    .header__nav li {
         list-style: none;
         margin: 15px;
         color: white;
     }
 }
-</style>```
+</style>

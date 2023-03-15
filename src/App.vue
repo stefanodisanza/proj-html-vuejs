@@ -5,6 +5,7 @@
     <Consultans />
     <About />
     <Project />
+    <Testimonial />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Hero from './components/Hero.vue';
 import Consultans from './components/Consultans.vue';
 import About from './components/About.vue'
 import Project from './components/Project.vue';
+import Testimonial from './components/Testimonial.vue';
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     Hero,
     Consultans,
     About,
-    Project
+    Project,
+    Testimonial
   }
 
 }

@@ -53,6 +53,7 @@ export default {
 }
 
 .container {
+    background-color: white;
     max-width: 1200px;
     margin-top: 100px;
     margin-bottom: 100px;

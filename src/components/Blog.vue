@@ -10,7 +10,7 @@
             <div class="card">
                 <img src="/images/startup-business-people-and-strategy-board-PAJ3P9K-1390x1042.jpg" alt="">
                 <div class="card__text">
-                    <h5>july 4, 2019 by paul</h5>
+                    <h5 class="data">july 4, 2019 by paul</h5>
                     <h3>Canadian Consulting Firm acquired by UK Giant</h3>
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable
                         foliage of my trees, and but a ...</p>
@@ -19,7 +19,7 @@
             <div class="card">
                 <img src="/images/business-people-working-together-on-project-and-5FHSKBL-1390.jpg" alt="">
                 <div class="card__text">
-                    <h5>july 4, 2019 by paul</h5>
+                    <h5 class="data">july 4, 2019 by paul</h5>
                     <h3>JCanadian Consulting Firm acquired by UK Giant</h3>
                     <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable
                         foliage of my trees, and but a ...</p>
@@ -34,6 +34,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.data {
+    color: #F81D39;
+    padding-bottom: 15px;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -60,6 +65,12 @@ h1 {
     color: white;
     text-align: start;
     padding-left: 25px;
+}
+
+h3 {
+    padding-bottom: 25px;
+    font-weight: 400;
+    font-size: 25px;
 }
 
 .about__green-button {

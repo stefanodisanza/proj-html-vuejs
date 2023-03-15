@@ -6,7 +6,7 @@
             <nav class="header__nav">
                 <ul>
                     <li v-for="link in links" :key="link.id">
-                        <a :href="link.url">{{ link.label }}</a>
+                        <a :href="link.url" :class="{ 'nav-link': true }">{{ link.label }}</a>
                     </li>
                 </ul>
             </nav>
@@ -98,5 +98,18 @@ export default {
         margin: 15px;
         color: white;
     }
+}
+
+.nav-link {
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    font-size: 20px;
+    transform: scale(1.1);
 }
 </style>

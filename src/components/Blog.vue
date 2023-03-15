@@ -114,6 +114,11 @@ h3 {
     box-sizing: border-box;
     width: 65%;
     text-align: left;
+
+    &:hover {
+        background-color: #39FFBF;
+
+    }
 }
 
 .card__text h3 {

@@ -6,6 +6,7 @@
     <About />
     <Project />
     <Testimonial />
+    <Blog />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Consultans from './components/Consultans.vue';
 import About from './components/About.vue'
 import Project from './components/Project.vue';
 import Testimonial from './components/Testimonial.vue';
+import Blog from './components/Blog.vue';
 
 export default {
   components: {
@@ -24,7 +26,8 @@ export default {
     Consultans,
     About,
     Project,
-    Testimonial
+    Testimonial,
+    Blog
   }
 
 }

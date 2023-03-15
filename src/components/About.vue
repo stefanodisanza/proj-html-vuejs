@@ -71,6 +71,11 @@ h2 {
     border: none;
     cursor: pointer;
     font-size: 18px;
+
+    &:hover {
+        background-color: #151838;
+        color: #fff;
+    }
 }
 
 .about__subtitle {

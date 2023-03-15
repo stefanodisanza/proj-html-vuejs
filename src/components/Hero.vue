@@ -69,7 +69,7 @@ img {
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        background-color: #000;
+        background-color: #F81D39;
         color: #fff;
     }
 }
